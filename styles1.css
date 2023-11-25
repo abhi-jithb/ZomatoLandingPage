@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Poppins' , sans-serif;
+}
+/* This is for big screen */
+.hero_section{
+    background: url('./heroSectionBackground.png');
+    background-size: cover;
+      background-position: center;
+    color: white;
+    min-height: 60vh;
+}
+/* flex is used to make responsive */
+.navbar{
+    display: flex;
+    align-items: center;
+    /* to align all contents under navbar to center */
+    justify-content: center;
+    height: 65px;
+    /* padding for top and bottom */
+    padding: 16px 48px;
+    justify-content: space-between;
+
+}
+
+
+.navbar a{
+    /* to make link text white */
+    color: white;
+    /* to remove underline from text */
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.navbar__menu_container{
+    display: flex;
+    gap: 18px;
+}
+.navbar__menu_container .user_icon{
+    height: 25px;
+    width: 25px;
+    display: flex;
+    /* within the height and width => aligning items in x direction and y direction with respect to the circle */
+    align-items: center;
+    justify-content: center;
+    /* circle */
+    border-radius: 100%;
+    border: solid 1px white;
+    /* display as none since it only appears for mobile application
+    if needed we can apply */
+    display:none;
+}
+
+
+/* to make custom Screen size is from 0-600  i.e, smaller/mobile screen size */
+@media only screen and (max-width: 600px){
+    .navbar__menu_container .user_icon{
+        display: flex;
+    }
+    /* here while we make screen size smaller contents under link will disappear i.e mobile/small screen */
+    .link{
+     display: none;
+    }
+    .hero_section{
+        min-height:80vh;
+        /* here in mobile screen the min-height is higher as compared to big screen */
+    }
+}
+
+/* .header_description{ */
+    width: 50rem;
+    color: white; 
+    margin: auto;
+    text-align: center; 
+    font-size: 2.6rem;
+/* } */
