@@ -12,6 +12,7 @@
     color: white;
     min-height: 60vh;
 }
+
 /* flex is used to make responsive */
 .navbar{
     display: flex;
@@ -54,6 +55,79 @@
 }
 
 
+/* from online zomata site */
+/* .header_description{ 
+    width: 50rem;
+    color: white; 
+    margin: auto;
+    text-align: center; 
+    font-size: 2.6rem;
+/* /* }  */
+
+.hero__section_container{
+    display: flex;
+    flex-direction:column ;
+    /* for x-direction */
+    align-items: center;
+    /* for y-direction */
+    justify-content: center;
+    gap: 20px;
+    height: calc(80vh - 65px);
+    /* cal() is used to calculate two different units */
+    /* and to bring the content to center (85vh - 65px) */
+}
+
+.hero_section_logo{
+
+    width: 200px;
+    height: 50px;
+    object-fit: contain;
+    transform: none;
+    opacity: 1;
+    will-change: transform, opacity;
+    border-radius: inherit;
+    filter: unset;
+    transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+}
+.hero_section_title{
+
+    text-align: center;
+    /* font-size: 30px; */
+    font-weight: 350;
+    /* font weight does not have Unit */
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.hero__section_input_container{
+    background-color: white;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width:50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.input__container_location,
+.input__container_search{
+    padding: 5px;
+    border: none;
+    outline: none;
+    
+}
+.input__container_location{
+    width: 35%;
+border-right: 2px solid #e0e0e0;
+}
+.input__container_search{
+    width: 65%;
+}
+
+
 /* to make custom Screen size is from 0-600  i.e, smaller/mobile screen size */
 @media only screen and (max-width: 600px){
     .navbar__menu_container .user_icon{
@@ -64,15 +138,105 @@
      display: none;
     }
     .hero_section{
-        min-height:80vh;
+        min-height: 60vh;
         /* here in mobile screen the min-height is higher as compared to big screen */
     }
 }
+ 
+.hero__section_container{
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+}
+.input__container_location,
+.input__container_search{
+    padding: 18px;
+    border-radius: 10px;
+    width: 98%;
+}
+.hero__section_container{
+    height:  calc(60vh - 65px);
 
-/* .header_description{ */
-    width: 50rem;
-    color: white; 
-    margin: auto;
-    text-align: center; 
-    font-size: 2.6rem;
-/* } */
+}
+
+.hero_section_title{
+    font-size: 18px;
+    width: 95%;
+}
+
+.container{
+    margin: 2rem auto;
+    /* width: 40%; */
+
+}
+
+.we__offer{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem;
+   align-items: center;
+   justify-content: center;
+}
+.we__offer_card{
+    border-radius: 15px;
+    /* without overflow:hidden only bottom side have the curved radius*/
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    /* here transition determines the animation of changing the border
+    when we hover on it for a period of time */
+    transition: all 0.90s ease;
+}
+.we__offer_card:hover{
+    transform: scale(1.1);
+/* Transform property is for bulging out the card when we hover on it */
+background-color: #e0e0e0;
+
+}
+
+.we__offer_card img{
+    width: 100%;
+    height:170px;
+    object-fit: cover;
+
+}
+
+.we__offer_content{
+    padding: 10px;
+    /* here we cant add font-size and font-height 
+    since it is a container; */
+}
+.we__offer_content h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.we__offer_content p{
+    font-size: 12.5px;
+}
+
+.collections h1{
+
+font-weight: 60;
+}
+
+.sub__heading_container{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.sub__heading_container span{
+    font-size: 13px;
+    color: #ff7e8b;
+    cursor: pointer;
+}
+.collection_card_container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25px;
+}
