@@ -63,7 +63,7 @@
 
       <div>
           <h2 class="hero_section_title">
-       Find the best restaurants, cafés and bars in India
+       Discover the best restaurants, cafés and bars in India
 
         <!--  -->
         </h1>
@@ -73,7 +73,7 @@
           <i class="fa-solid fa-location-dot" style="color: #f79159;"></i>
           <input type="text" class="input__container_location" placeholder="Location"/>
           <i class="fa-brands fa-searchengin" style="color: #898d94;"></i>
-          <input type="text" class="input__container_search" placeholder="Search" />
+          <input type="text" class="input__container_search" placeholder="Search for restaurent, cuisne or a dish" />
         </div>
     </div>
     </section>
@@ -115,26 +115,29 @@
       </div>
   
     </section>
-<!-- two diff classes  -->
+
+
+<!-- two diff classes- container is the parent and collecton id the child  -->
     <section class="container collections">
       <h1>Collections</h1>
       <div class="sub__heading_container">
-        <span>Explore curated lists of top restaurents, cafés, pubs in india basedon trends
+        <span>Discover the best foods and drinks in India
         </span>
         <span>All Collections in India </span>
-      </div>
-
-      <div class="card card1">
-        <div class="overlay"></div>
-        <div class="content">
-          <h4>Live Cricket Screening</h4>
-          <span>16 places </span>
-        </div>
       </div>
 
 
       <div class="collections_card_container">
         <div class="card card1">
+       <div class="overlay"></div>
+        <div class="content">
+          <h4>Live Cricket Screening</h4>
+          <span>16 places </span>
+        </div>
+       </div>
+
+
+        <div class="card card2">
           <!-- overlay => gradiant -->
           <div class="overlay"></div>
           <div class="content">
@@ -143,7 +146,7 @@
           </div>
         </div>
 
-        <div class="card card1">
+        <div class="card card3">
           <div class="overlay"></div>
           <div class="content">
             <h4>Newly opened restaurants</h4>
@@ -151,7 +154,7 @@
           </div>
         </div>
 
-        <div class="card card1">
+        <div class="card card4">
           <div class="overlay"></div>
           <div class="content">
             <h4>Trending Pubs Near Me</h4>
@@ -162,4 +165,139 @@
 
       </div>
     </section>
+
+
+    <!-- for get the app section -->
+    <section class="container get__the_app">
+      <div class="semiContainer">
+        <div class="left">
+          <img src="./mobileBanner.png" alt="">
+        </div>
+
+        <div class="right">
+          <h1>Get the Zomato App</h1>
+          <p>We will send a link, open it and download in your phone </p>
+           <div class="radio__button_container">
+
+            <div>
+              <input type="radio" id="email" name="download_app"  />
+              <label for="email" style="font-size: 14px;">Email</label>
+            </div>
+            <div>
+              <input type="radio" id="email" name="download_app"  />
+              <label for="email" style="font-size: 14px;">Phone </label>
+            </div>
+           </div>
+
+           <div class="input_container" >
+             <input type="text" placeholder="Email" pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]$" required/>
+             <button> Share App Link </button>
+            </div>
+
+           <div class="download__app_container" >
+            <h5>Download App From</h5>
+            <div>
+              <img src="./appleStore.png" alt="img of apple store">
+              <img src="./appleStore.png" alt="img of apple store">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+<!-- this is for explore section -->
+     <!-- <section class="explore_options">
+      <div>
+        Explore options near
+        <div tabindex="on" role="button" aria-expanded="false" aria-label="Popular cuisines near me" title="Popular cuisines near me" font-weight="1" class="sc-ixe81d-6 input_explore"><section class="sc-ixe81d-8 ihgAwA"><h5 font-weight="" class="sc-1uh2q3e-0 sc-ixe81d-7 jYkmEI">Popular cuisines near me</h5></section><i class="sc-rbbb40-1 iFnyeo sc-ixe81d-3 ipHUyL" color="#1C1C1C" tabindex="-1" aria-hidden="true" size="20"><svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="20" height="20" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iRDDBk"><title>chevron-down</title><path d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z"></path></svg></i>
+       <section class="inside_explore">
+        <h5 font-weight="" class="sc-1uh2q3e-0 sc-ixe81d-7 jYkmEI">Popular cuisines near me</h5>
+       </section>
+       <i class="sc-rbbb40-1 iFnyeo sc-ixe81d-3 drop_icon" color="#1C1C1C" tabindex="-1" aria-hidden="true" size="20"><svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="20" height="20" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iRDDBk"><title>chevron-down</title><path d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z"></path></svg></i>
+       <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="20" height="20" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iRDDBk"><title>chevron-down</title><path d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z"></path></svg>
+
+
+        </div>
+        <div>
+          <select name="" id=""></select>
+        </div> 
+      </div>
+
+    </section> -->
+
+<footer class="container footer">
+  <div class="footer_section1">
+    <img src="./logo.png" alt="Zomato logo" />
+    <div class="section1__buttonContainer">
+      <button>
+        <img src="https://flagcdn.com/w40/in.png" alt="Indain Flag" style="width: 15px;">
+        India
+      </button>
+      <button><i class="fa fa-globe"></i>English</button>
+    </div>
+  </div>
+  <div class="navigation_container">
+    <div class="link_container">
+      <h5> ABOUT ZOMATO</h5>
+      <a href="#" class="footer__link">Who we are</a>
+      <a href="#" class="footer__link">Blogs</a>
+      <a href="#" class="footer__link">Work with us</a>
+      <a href="#" class="footer__link">Investor Relations</a>
+      <a href="#" class="footer__link">Report Fraud</a>
+      <a href="#" class="footer__link">Contact us</a>
+    </div>
+  
+
+  
+    <div class="link_container">
+      <h5>ZOMAVERSE</h5>
+      <a href="#" class="footer__link">Zomato</a>
+      <a href="#" class="footer__link">Blinkit</a>
+      <a href="#" class="footer__link">Feeding India</a>
+      <a href="#" class="footer__link">Hyperpure</a>
+      <a href="#" class="footer__link">ZomaLand</a>
+    </div>
+  
+
+
+    <div class="link_container">
+      <h5>FOR RESTAURANTS</h5>
+      <a href="#" class="footer__link">Partners with us</a>
+      <a href="#" class="footer__link">Apps for you</a>
+      <a href="#" class="footer__link">Feeding India</a>
+      <h5>FOR ENTERPRISES</h5>      
+      <a href="#" class="footer__link">Zomato For Work</a>
+    </div>
+
+    <div class="link_container">
+      <h5>LEARN MORE</h5>
+      <a href="#" class="footer__link">Privacy</a>
+      <a href="#" class="footer__link">Security</a>
+      <a href="#" class="footer__link">Terms</a>
+      <a href="#" class="footer__link">Sitemaps</a>
+    </div>
+
+
+    <div class="link_container">
+      <h5>SOCIAL MEDIA</h5>
+      <div class="section__link_container">
+      <button><i class="fa-brands fa-linkedin"></i></button>
+      <button><i class="fa-brands fa-instagram"></i></button>
+      <button><i class="fa-brands fa-twitter"></i></button>
+      <button><i class="fa-brands fa-youtube"></i></button>
+      <button><i class="fa-brands fa-facebook"></i></button>
+    </div>
+    
+    <br />
+    <img src="./appleStore.png" alt="apple store image" class="footer__section_logo">
+    <img src="./playStore.png" alt="play store image"   class="footer__section_logo">
+  </div> 
+  </div>
+  </div>
+<div class="disclaimer">
+  By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.
+</div>
+</footer>
   </body>
