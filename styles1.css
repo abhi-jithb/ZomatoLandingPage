@@ -12,6 +12,7 @@
     color: white;
     min-height: 60vh;
 }
+
 /* flex is used to make responsive */
 .navbar{
     display: flex;
@@ -54,6 +55,89 @@
 }
 
 
+/* from online zomata site */
+/* .header_description{ 
+    width: 50rem;
+    color: white; 
+    margin: auto;
+    text-align: center; 
+    font-size: 2.6rem;
+/* /* }  */
+
+.hero__section_container{
+    display: flex;
+    flex-direction:column ;
+    /* for x-direction */
+    align-items: center;
+    /* for y-direction */
+    justify-content: center;
+    gap: 20px;
+    height: calc(80vh - 65px);
+    /* cal() is used to calculate two different units */
+    /* and to bring the content to center (85vh - 65px) */
+}
+
+.hero_section_logo{
+
+    width: 200px;
+    height: 50px;
+    object-fit: contain;
+    transform: none;
+    opacity: 1;
+    will-change: transform, opacity;
+    border-radius: inherit;
+    filter: unset;
+    transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+}
+.hero_section_title{
+
+    text-align: center;
+    /* font-size: 30px; */
+    font-weight: 350;
+    /* font weight does not have Unit */
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.hero__section_input_container{
+    /* background-color: white; */
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width:50%;
+    /* border-radius: 10px; */
+    margin-bottom: 20px;
+
+    background: rgb(255, 255, 255);
+    border-radius: 0.8rem;
+    /* box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px; */
+    border: 0.5px solid rgb(232, 232, 232);
+
+
+   
+}
+
+
+
+.input__container_location,
+.input__container_search{
+    padding: 5px;
+    border: none;
+    outline: none;
+    
+}
+.input__container_location{
+    width: 35%;
+border-right: 2px solid #e0e0e0;
+}
+.input__container_search{
+    width: 65%;
+}
+
+
 /* to make custom Screen size is from 0-600  i.e, smaller/mobile screen size */
 @media only screen and (max-width: 600px){
     .navbar__menu_container .user_icon{
@@ -64,15 +148,504 @@
      display: none;
     }
     .hero_section{
-        min-height:80vh;
+        min-height: 60vh;
         /* here in mobile screen the min-height is higher as compared to big screen */
     }
 }
 
-/* .header_description{ */
-    width: 50rem;
-    color: white; 
+
+ 
+.hero__section_container{
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+}
+.input__container_location,
+.input__container_search{
+    padding: 18px;
+    border-radius: 10px;
+    width: 98%;
+}
+.hero__section_container{
+    height:  calc(60vh - 65px);
+
+}
+
+.hero_section_title{
+    font-size: 18px;
+    width: 95%;
+}
+
+.container{
+    margin: 2rem auto;
+    /* width: 40%; */
+
+}
+
+.we__offer{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem;
+   align-items: center;
+   justify-content: center;
+}
+.we__offer_card{
+    border-radius: 15px;
+    /* without overflow:hidden only bottom side have the curved radius*/
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    /* here transition determines the animation of changing the border
+    when we hover on it for a period of time */
+    transition: all 0.90s ease;
+}
+.we__offer_card:hover{
+    transform: scale(1.1);
+/* Transform property is for bulging out the card when we hover on it */
+background-color: #e0e0e0;
+
+}
+
+.we__offer_card img{
+    width: 100%;
+    height:170px;
+    object-fit: cover;
+
+}
+
+.we__offer_content{
+    padding: 10px;
+    /* here we cant add font-size and font-height 
+    since it is a container; */
+}
+.we__offer_content h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.we__offer_content p{
+    font-size: 12.5px;
+}
+
+.collections h1{
+
+font-weight: 600;
+}
+
+.collections .sub__heading_container{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* wrapping - for getting into new row while wrapping */
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.sub__heading_container span:nth-child(2){
+    font-size: 13px;
+    color: #ff7e8b;
+    cursor: pointer;
+    margin-left: 502px;
+}
+.collections_card_container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25px;
+    object-fit: cover;
+}
+
+.collections_card_container .card{
+    height: 300px;
+    min-width: 240px;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card1{
+    background-image: url("./collection1.jpg");
+}
+.card2{
+    background-image: url("./collection2.jpg");
+}
+.card3{
+    background-image: url("./collection3.jpg");
+}
+.card4{
+background-image:url("./collection4.jpg")
+}
+
+.overlay{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+/* Transparent linear gradiant 
+    background: linear-gradient(
+        90deg;
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(120, 200, 150, 0.5) 85%,
+    );*/
+}
+    .collections_card_container .card .content{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: white;
+        font-size: 0.9rem;
+        z-index: 5;
+        /* Z-axis */
+    }
+
+    @media only screen and (max-width: 600px) {
+        .collections_card_container{
+            display: flex;
+        }
+        /* ... */
+        .collections .sub__heading_container {
+            min-height: 60vh
+            /* ... */
+        }
+    }
+    
+
+    .content h4{
+        font-weight: 400px;
+        padding: 10px;
+       /*  TOP TO BOTTOM */ 
+        background-image: linear-gradient(red, yellow);
+        /* background-image: linear-gradient(direction, color-stop1, color-stop2, ...); */ 
+
+    }
+
+    .get__the_app{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(225, 251, 247);
+        width: 100%;
+        padding: 3rem 6rem;
+    }
+
+    .get__the_app .semiContainer{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+.get__the_app .semiContainer .left{
+    flex: 2;
+}
+.get__the_app .semiContainer .left img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+
+}
+
+.get__the_app .semiContainer .right{
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.right h1{
+    font-weight: 400;
+    font-size: 2rem;
+}
+.right p{
+    font-size: 0.8rem;
+}
+
+.right .radio__button_container{
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+} 
+
+.right .radio__button_container div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.right .radio__button_container div input{
+    height: 15px;
+    width: 15px;
+    accent-color: rgb(239, 79, 95);
+}
+
+.right .input_container{
+    display: flex;
+    gap:0.5rem;
+
+}
+
+/* to shrink it */
+.input_container{
+    flex-wrap: wrap;
+}
+
+.input_container button,
+.input_container input{
+    padding: 10px 12px;
+}
+.input_container input{
+    flex:auto;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+}
+
+.input_container button{
+    border: none;
+    background-color: rgb(239, 79, 95);
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download__app_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.right .download__app_container h5{
+    font-weight: 400px;
+    color: gray;
+    
+}
+
+.right .download__app_container div{
+    display:flex;
+    gap: 1rem;
+}
+
+.right .download__app_container div img{
+    width: 35%;
+}
+.right .input_container button:hover{
+    background-color: #e03535;
+
+}
+
+/* Media querry for Download app */
+
+@media only screen  and  (max-width: 1300px){
+    .get__the_app .semiContainer .left,
+    .get__the_app .semiContainer .right {
+        flex: 1;
+/* felx=1 means 50% left, 50% right */
+    }
+
+    .get__the_app .semiContainer{
+        width: 80%;
+    }
+}
+
+@media only screen  and  (max-width: 900px){
+    .get__the_app{
+        padding: 2rem 0;
+    }
+    .get__the_app .semiContainer{
+        width: 95%;
+        flex-direction: column;
+        /* image takes new column when very small */
+    }
+}
+
+
+/* from actual zomato site */
+
+/* .input_explore{
+    margin-top: 0px;
+    margin-left: 0px;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 2rem 2.4rem;
+}
+.jYkmEI{
+font-weight: 400;
+    color: rgb(28, 28, 28);
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0px;
+}
+.inside_explore{
+display: flex;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+.drop_icon{
+font-weight: 300;
+font-family: Okra, Helvetica, sans-serif;
+font-size: 1.6rem;
+box-sizing: inherit;
+-webkit-tap-highlight-color: transparent;
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+cursor: inherit;
+transform: rotate(0deg);
+transition: transform 0.25s ease-in 0s;
+margin-top: 0px;
+margin-left: 0px;
+white-space: nowrap;
+
+}
+
+.iRDDBk{
+font-weight: 300;
+font-family: Okra, Helvetica, sans-serif;
+font-size: 1.6rem;
+cursor: inherit;
+white-space: nowrap;
+fill: rgb(28, 28, 28);
+box-sizing: inherit;
+-webkit-tap-highlight-color: transparent;
+display: inline-block;
+vertical-align: middle;
+line-height: 1;
+width: 20px;
+height: 20px;
+} */
+
+.footer{
+    width: 100%;
+}
+
+.footer_section1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
     margin: auto;
-    text-align: center; 
-    font-size: 2.6rem;
-/* } */
+}
+
+.footer_section1 img{
+    width: 130px;
+}
+
+.section1__buttonContainer{
+    display: flex;
+    gap: 1rem;
+
+}
+
+.section1__buttonContainer button{
+    padding: 5px;
+    width: 90px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.navigation_container{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr  1fr; */
+    grid-template-columns: repeat(5, 1fr);
+    width: 80%;
+    margin: auto;
+    gap: 1rem;
+    padding: 3rem 0;
+
+}   
+
+.link_container{
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.link_container h5{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0.8px;
+}
+
+.footer__link{
+    text-decoration: none;
+    color: gray;
+    font-size: 12.5px;
+    font-weight: 300;
+}
+
+.footer__link:hover{
+    color:black
+}
+
+.section__link_container button{
+   background-color: black;
+   border:none;
+   width: 25px;
+   height: 25px;
+   border-radius: 30px;
+   color: white;
+   /* color property is for content */
+}
+
+.section__link_container button i{
+   /* color: white; */
+   font-size: 13px;
+   display: flex;
+   /* x-axis */
+   align-items: center;
+   /* y-axis */
+   justify-content: center;
+}
+
+.footer__section_logo{
+    width: 100%;
+}
+
+.disclaimer{
+    width: 95%;
+    color: gray;
+    margin: auto;
+    border-top: 1px solid gray;
+    padding: 1.5rem;
+  
+}
+
+@media  only screen and (max-width:900px){
+    .navigation_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media  only screen and (max-width:500px){
+    .navigation_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media  only screen and (max-width:320px){
+    .navigation_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
